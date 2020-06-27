@@ -10,10 +10,10 @@ import React from 'react';
  */
 
 /** @type {import('react').Context<TGeneralContext>} */
-const ThemeContext = React.createContext({
+const GeneralContext = React.createContext({
     competitionState: {},
     notificationActionsts: [],
     status: 'finished'
 });
  
-export default ThemeContext;
+export default GeneralContext;
