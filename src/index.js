@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import ThemeContext from './ThemeContext';
+import GeneralContext from './GeneralContext';
  
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeContext.Provider value="green">
+    <GeneralContext.Provider value={{
+      competitionState: { finished: true },
+      notificationActionsts: ['first', 'second'],
+      status: 'inprogress'
+    }}>
       <App />
-    </ThemeContext.Provider>
+    </GeneralContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
