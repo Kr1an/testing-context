@@ -1,22 +1,16 @@
-import React, { useState } from 'react';
+// src/App.js
+import React, { useContext } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ThemeContext from './ThemeContext';
+import GeneralContext from './GeneralContext';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const color = React.useContext(ThemeContext);
+  const competitionContext = useContext(GeneralContext);
   return (
     <div className="App">
-      <div>
-        <p style={{ color }}>
-          Hello World
-        </p>
-        <p>You clicked {count} times</p>
-        <button onClick={() => setCount(count + 1)}>
-          Click me
-        </button>
-      </div>
+      <p>
+        {JSON.stringify(competitionContext)}
+      </p>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
